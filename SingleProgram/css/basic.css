@@ -1,0 +1,14 @@
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.container {
+			width: 1170px;
+			max-width: none !important;
+		}
+		
+		body {
+			padding-top: 120px;
+			padding-bottom: 10px;
+		}
