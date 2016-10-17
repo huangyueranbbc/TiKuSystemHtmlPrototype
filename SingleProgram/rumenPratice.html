@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="题库">
+		<meta name="author" content="黄跃然 huangyueran">
+		<title>练习系统</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+		<link href="css/sticky-footer.css" rel="stylesheet" />
+		<link href="css/basic.css" rel="stylesheet" />
+		<!-- 禁用响应式布局 -->
+	</head>
+
+	<body>
+
+		<!--   	导航条开始    -->
+		<nav class="nav navbar-inverse navbar-fixed-top">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- 	描述：logo -->
+					<a class="navbar-brand">
+						<img src="img/ic_launcher.jpg" style="width: 75px;" />
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-btn center-block text-center">
+					<li class="navbar-btn">
+						<a href="index.html">首页<span class="sr-only"></span></a>
+					</li>
+					<li class="active navbar-btn">
+						<a href="usehelp.html">试题集<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">评测装填<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">帮助手册<span class="sr-only"></span></a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown navbar-btn">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button">
+							<span class="glyphicon glyphicon-user"></span> admin
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="userCenter.html">个人信息</a>
+							</li>
+							<li>
+								<a href="#">我的消息</a>
+							</li>
+							<li>
+								<a href="#">修改密码</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
+				</ul>
+
+			</div>
+		</nav>
+		<!--   	导航条结束    -->
+
+		<!-- 中间内容开始 -->
+		<div class="container">
+			<div class="row">
+
+				<!-- 内容 -->
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+					<!-- 路径 -->
+					<ol class="breadcrumb">
+						<li>
+							<a href="practiceHome.html">试题集 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<li class="active">入门训练 <span class="glyphicon glyphicon-chevron-right"></li>
+						</li>
+					</ol>
+
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>试题号</th>
+									<th>试题名称</th>
+									<th>试题说明</th>
+									<th>试题类型</th>
+									<th>创建时间</th>
+									<th>状态</th>
+									<th>进入试题</th>
+									<th>提交记录</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>ALGO-1</td>
+									<td><a href="question.html">幸运数</a></td>
+									<td>幸运数</td>
+									<td>普通试题</td>
+									<td>2017-05-05</td>
+									<td>已打开</td>
+									<td><a href="question.html">进入</a></td>
+									<td><a href="#">提交记录</a></td>
+								</tr>
+								<tr>
+									<td>ALGO-2</td>
+									<td><a href="question.html">字符删除</a></td>
+									<td>删除指定字符串</td>
+									<td>普通试题</td>
+									<td>2017-05-05</td>
+									<td>未打开</td>
+									<td><a href="question.html">进入</a></td>
+									<td><a href="#">提交记录</a></td>
+								</tr>
+								<tr>
+									<td>ALGO-3</td>
+									<td><a href="question.html">高僧斗法</a></td>
+									<td>删除指定字符串</td>
+									<td>普通试题</td>
+									<td>2017-05-05</td>
+									<td>正确</td>
+									<td><a href="question.html">进入</a></td>
+									<td><a href="#">提交记录</a></td>
+								</tr>
+								<tr>
+									<td>ALGO-4</td>
+									<td><a href="question.html">字符统计</a></td>
+									<td>删除指定字符串</td>
+									<td>普通试题</td>
+									<td>2017-05-05</td>
+									<td>错误</td>
+									<td><a href="question.html">进入</a></td>
+									<td><a href="#">提交记录</a></td>
+								</tr>
+								<tr>
+									<td>ALGO-93</td>
+									<td><a href="question.html">阶乘</a></td>
+									<td>删除指定字符串</td>
+									<td>VIP试题</td>
+									<td>2017-05-05</td>
+									<td>未打开</td>
+									<td><a href="question.html">进入</a></td>
+									<td><a href="#">提交记录</a></td>
+								</tr>	
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- 中间内容结束 -->
+
+		<!--   	底部开始    -->
+		<footer class="navbar-inverse navbar-fixed-bottom" style="height: 90px;">
+			<!--采用container，使得页尾内容居中 -->
+			<div class="container" style="color: #FFFFFF;">
+				2017 &copy; 练习系统
+				<a href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
+			</div>
+		</footer>
+
+		<!-- 底部结束 -->
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="题库">
+		<meta name="author" content="黄跃然 huangyueran">
+		<title>练习系统</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+		<link href="css/sticky-footer.css" rel="stylesheet" />
+		<link href="css/basic.css" rel="stylesheet" />
+		<!-- 禁用响应式布局 -->
+	</head>
+
+	<body>
+
+		<!--   	导航条开始    -->
+		<nav class="nav navbar-inverse navbar-fixed-top">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- 	描述：logo -->
+					<a class="navbar-brand">
+						<img src="img/ic_launcher.jpg" style="width: 75px;" />
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-btn center-block text-center">
+					<li class="navbar-btn">
+						<a href="index.html">首页<span class="sr-only"></span></a>
+					</li>
+					<li class="active navbar-btn">
+						<a href="usehelp.html">试题集<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">评测装填<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">帮助手册<span class="sr-only"></span></a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown navbar-btn">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button">
+							<span class="glyphicon glyphicon-user"></span> admin
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="userCenter.html">个人信息</a>
+							</li>
+							<li>
+								<a href="#">我的消息</a>
+							</li>
+							<li>
+								<a href="#">修改密码</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
+				</ul>
+
+			</div>
+		</nav>
+		<!--   	导航条结束    -->
+
+		<!-- 中间内容开始 -->
+		<div class="container">
+			<div class="row">
+
+				<!-- 内容 -->
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+					<!-- 路径 -->
+					<ol class="breadcrumb">
+						<li>
+							<a href="practiceHome.html">试题集 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<a href="rumenPratice.html">入门训练 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<a href="question.html">幸运数 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<li class="active">提交答案 <span class="glyphicon glyphicon-chevron-right"></li>
+						</li>
+					</ol>
+
+					<div class="table-responsive jumbotron">
+						<form action="question.html" class="form-signin" role="form">
+						<table class="table table-condensed">
+							<tbody style="font-size: 16px;font-family: '微软雅黑';">
+								<th style="font-size: 25px;">幸运数</th>
+								<tr><td><b>输入答案：</b></td></tr>
+								<tr><td>
+									<textarea class="form-control" rows="26"></textarea>
+								</td></tr>
+								<tr><td><center><button class="btn btn-primary btn-lg" type="submit">提交</button></center></td></tr>
+							</tbody>
+						</table>
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- 中间内容结束 -->
+
+		<!--   	底部开始    -->
+		<footer class="navbar-inverse navbar-fixed-bottom" style="height: 90px;">
+			<!--采用container，使得页尾内容居中 -->
+			<div class="container" style="color: #FFFFFF;">
+				2017 &copy; 练习系统
+				<a href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
+			</div>
+		</footer>
+
+		<!-- 底部结束 -->
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+
+</html>
