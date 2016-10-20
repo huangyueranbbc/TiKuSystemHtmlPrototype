@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="题库">
+		<meta name="author" content="黄跃然 huangyueran">
+		<title>练习系统</title>
+		<script language="javascript" src="js/jquery.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+		<link href="css/sticky-footer.css" rel="stylesheet" />
+		<link href="css/basic.css" rel="stylesheet" />
+    
+		<!-- 禁用响应式布局 -->
+	</head>
+
+	<body>
+		
+		<!--   	导航条开始    -->
+		<nav class="nav navbar-inverse navbar-fixed-top">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- 	描述：logo -->
+					<a class="navbar-brand">
+						<img src="img/ic_launcher.jpg" style="width: 75px;" />
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-btn center-block text-center">
+					<li class="navbar-btn">
+						<a href="index.html">首页<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="help.html">帮助文档<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">系统公告<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="practiceHome.html">进入系统<span class="sr-only"></span></a>
+					</li>
+					<li class="active navbar-btn">
+						<a href="topicHome.html">交流中心<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">联系方式<span class="sr-only"></span></a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown navbar-btn">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button">
+							<span class="glyphicon glyphicon-user"></span> admin
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="userCenter.html">个人信息</a>
+							</li>
+							<li>
+								<a href="#">我的消息</a>
+							</li>
+							<li>
+								<a href="#">修改密码</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
+				</ul>
+
+			</div>
+		</nav>
+		<!--   	导航条结束    -->
+
+		<!-- 中间内容开始 -->
+		<div class="container-fluid">
+			<div class="row">
+
+				<!-- 内容 -->
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+
+					<!-- 路径 -->
+					<ol class="breadcrumb">
+						<li>
+							<a href="topicHome.html">交流中心 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<a href="createTopic.html">发表新主题 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<li class="active">添加问题答案<span class="glyphicon glyphicon-chevron-right"></li>
+						</li>
+					</ol>					
+		
+		<!--发表新主题开始-->
+		<div class="QuictReply">
+		<form action="topicHome.html">
+			<div style="padding-left: 3px;">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<td>
+									<button type="button" class="btn btn-danger" onclick="xxoo">添加选项</button>
+							</td>
+						</tr>
+						<tr>
+							<th class="col-md-5 col-lg-5 col-sm-5">输入值</th>
+							<th class="col-md-5 col-lg-5 col-sm-5">输出答案</th>
+							<th class="col-md-2 col-lg-2 col-sm-2">此项分数</th>
+						</tr>
+					</thead>
+
+					<body>
+					<tr class="alert alert-dismissable">
+						<td>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+						</td>
+						<td>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+						</td>
+						<td>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+						</td>
+						<td><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button></td>
+					</tr>
+					<tr class="alert alert-dismissable">
+						<td>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+						</td>
+						<td>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+						</td>
+						<td>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+						</td>
+						<td><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button></td>
+					</tr>
+					
+					<tr height="30" class="Tint">
+						<td class="center" colspan="2" align="center">
+							<button type="submit" class="btn btn-success">提交</button>
+						</td>
+					</tr>
+					</body>
+				</table>
+			</div>
+		</form>
+		<div style="height: 130px;"></div>
+		</div>
+		<!--发表新主题结束-->
+	
+					
+			</div>
+		</div>
+		</div>
+		<!-- 中间内容结束 -->
+
+		<!--   	底部开始    -->
+		<footer class="navbar-inverse navbar-fixed-bottom" style="height: 90px;">
+			<!--采用container，使得页尾内容居中 -->
+			<div class="container" style="color: #FFFFFF;">
+				2017 &copy; 练习系统
+				<a href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
+			</div>
+		</footer>
+
+		<!-- 底部结束 -->
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+
+</html>

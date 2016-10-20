@@ -12,3 +12,13 @@
 			padding-top: 120px;
 			padding-bottom: 10px;
 		}
+		
+		.Author {
+			color: #669dc6;
+			font-size: 12px; 
+		}
+		
+		.CreateTime {
+			color: #bbbbbb;
+			font-size: 12px;
+		}

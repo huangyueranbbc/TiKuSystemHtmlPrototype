@@ -157,8 +157,84 @@
 								</tr>	
 							</tbody>
 						</table>
+						
+						<!-- 分页开始 -->
+										<p></p>
+										<div class="container-fluid">
+											页次：1/13页 &nbsp; 每页显示：30条 &nbsp; 总记录数：385条 &nbsp;
+										</div>
+										<center class="center">
+										<ul class="pagination">
+											<li class="disabled">
+												<a href="#" aria-label="previous">
+													<span aria-hidden="true">&laquo;</span>
+												</a>
+											</li>
+									
+											<li class="active">
+												<a href="#">1</a>
+											</li>
+											<li>
+												<a href="#">2</a>
+											</li>
+											<li>
+												<a href="#">3</a>
+											</li>
+											<li>
+												<a href="#">4</a>
+											</li>
+											<li>
+												<a href="#">5</a>
+											</li>
+											<li>
+												<a href="#">6</a>
+											</li>
+											<li>
+												<a href="#">7</a>
+											</li>
+											<li>
+												<a href="#">8</a>
+											</li>
+											<li>
+												<a href="#">9</a>
+											</li>
+											<li>
+												<a href="#">10</a>
+											</li>
+									
+											<li>
+												<a href="#" aria-label="next">
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+																						<!--转到： <select id="pn" onchange="gotoPage(this.value)">
+														<s:iterator begin="1" end="%{pageCount }" var="num">
+															<option value="${num }">${num }</option>
+														</s:iterator>
+												</select>-->
+										&nbsp;&nbsp;
+										转到： 	<select id="pn" class="btn btn-danger" onchange="gotoPage(this.value)">
+														
+															<option value="${num }">1</option>
+															<option value="${num }">2</option>
+															<option value="${num }">3</option>
+															<option value="${num }">4</option>
+															<option value="${num }">5</option>
+
+													</select>
+										</ul>
+										
+
+
+									
+										</center>
+									
+										<!-- 分页结束 -->
+										
 					</div>
 				</div>
+
+		
 
 			</div>
 
