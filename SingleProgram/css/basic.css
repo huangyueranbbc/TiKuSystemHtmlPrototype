@@ -3,10 +3,11 @@
 			padding: 0px;
 		}
 		
+		/* 禁用响应式布局 
 		.container {
 			width: 1170px;
 			max-width: none !important;
-		}
+		}*/
 		
 		body {
 			padding-top: 120px;

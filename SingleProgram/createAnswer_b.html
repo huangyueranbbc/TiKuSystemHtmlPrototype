@@ -14,7 +14,61 @@
 		<link href="css/sticky-footer.css" rel="stylesheet" />
 		<link href="css/basic.css" rel="stylesheet" />
     
-		<!-- 禁用响应式布局 -->
+    <!------------   计算总分 判断是否为100分 100分才可以提交  ------------>
+   <script type="text/javascript">
+	// Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+	function OnInput(event) {
+		//score_hint
+		//score_waring
+		var array = document.getElementsByName("score");
+		var sum = 0;
+		for(var i = 0; i < array.length; i++) {
+			sum = parseFloat(sum) + parseFloat(array[i].value);
+		}
+		$('#score_hint').html("当前总分值:"+sum);
+		if(sum==parseFloat(100) ){ 
+			//btn_submit
+			$('#btn_submit').removeAttr("disabled");
+			$('#score_waring').html("");
+			$('#score_hint').attr("class","alert alert-success");
+		}else if(sum>100){
+			$('#btn_submit').attr("disabled",true);
+			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数超出范围！");
+			$('#score_hint').attr("class","alert alert-danger");
+		}else if(sum<100){
+			$('#btn_submit').attr("disabled",true); 	
+			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数未达到100分！");
+			$('#score_hint').attr("class","alert alert-warning");
+		}
+	}
+	// Internet Explorer
+	function OnPropChanged(event) {
+		/*  if (event.propertyName.toLowerCase () == "value") {
+		      alert ("The new content: " + event.srcElement.value);
+		  }*/
+		var array = document.getElementsByName("score");
+		var sum = 0;
+		for(var i = 0; i < array.length; i++) {
+			sum = parseFloat(sum) + parseFloat(array[i].value);
+		}
+		$('#score_hint').html("当前总分值:"+sum);
+		if(sum==parseFloat(100) ){ 
+			//btn_submit
+			$('#btn_submit').removeAttr("disabled");
+			$('#score_waring').html("");
+			$('#score_hint').attr("class","alert alert-success");
+		}else if(sum>100){
+			$('#btn_submit').attr("disabled",true);
+			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数超出范围！");
+			$('#score_hint').attr("class","alert alert-danger");
+		}else if(sum<100){
+			$('#btn_submit').attr("disabled",true); 	
+			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数未达到100分！");
+			$('#score_hint').attr("class","alert alert-warning");
+		}
+	}
+</script>
+    
 	</head>
 
 	<body>
@@ -29,7 +83,8 @@
 						<img src="img/ic_launcher.jpg" style="width: 75px;" />
 					</a>
 				</div>
-
+				
+				<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-btn center-block text-center">
 					<li class="navbar-btn">
 						<a href="index.html">首页<span class="sr-only"></span></a>
@@ -78,7 +133,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
 				</ul>
-
+				</div>
 			</div>
 		</nav>
 		<!--   	导航条结束    -->
@@ -103,13 +158,14 @@
 		<div class="QuictReply">
 		<form action="topicHome.html">
 			<div style="padding-left: 3px;">
-				<table class="table table-striped">
+				<table class="table table-responsive">
 					<thead>
 						<tr>
 							<td>
-									<button type="button" class="btn btn-danger" onclick="xxoo">添加选项</button>
+									<button id="btnAdd"  type="button" class="btn btn-danger">添加选项</button>
 							</td>
-						</tr>
+							<td><b><div id="score_hint" class="alert alert-warning">当前总分值:0分</div></b></td>							
+						</tr> 
 						<tr>
 							<th class="col-md-5 col-lg-5 col-sm-5">输入值</th>
 							<th class="col-md-5 col-lg-5 col-sm-5">输出答案</th>
@@ -117,42 +173,28 @@
 						</tr>
 					</thead>
 
-					<body>
+					<tbody id="mybody">
 					<tr class="alert alert-dismissable">
 						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="input" class="form" value="5.545"/>
 						</td>
 						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="output" class="form" value="5.545"/>
 						</td>
 						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="score" class="form" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)" value="0"/>
 						</td>
 						<td><button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button></td>
 					</tr>
-					<tr class="alert alert-dismissable">
-						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
-						</td>
-						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
-						</td>
-						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="5.545"/>
-						</td>
-						<td><button type="button" class="close" data-dismiss="alert" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button></td>
-					</tr>
-					
+
+					</tbody>
 					<tr height="30" class="Tint">
 						<td class="center" colspan="2" align="center">
-							<button type="submit" class="btn btn-success">提交</button>
+							<button disabled="false" id="btn_submit" type="submit" class="btn btn-success">提交</button>
 						</td>
 					</tr>
-					</body>
 				</table>
 			</div>
 		</form>
@@ -166,18 +208,44 @@
 		</div>
 		<!-- 中间内容结束 -->
 
-		<!--   	底部开始    -->
-		<footer class="navbar-inverse navbar-fixed-bottom" style="height: 90px;">
-			<!--采用container，使得页尾内容居中 -->
-			<div class="container" style="color: #FFFFFF;">
-				2017 &copy; 练习系统
-				<a href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
-			</div>
-		</footer>
-
-		<!-- 底部结束 -->
+<!--   	底部开始    -->
+	<footer class="navbar-inverse navbar-fixed-bottom navbar-collapse collapse">
+    <!--采用container，使得页尾内容居中 --> 
+        <div class="container" style="color: #FFFFFF;height: 70px;">
+        	2017 &copy; 练习系统 <a
+				href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
+        </div>
+     </footer>
+<!-- 底部结束 -->
 
 		<script src="js/jquery.min.js"></script>
+		
+				<script type="text/javascript">
+    $(function(){
+        //按钮点击事件
+        $("#btnAdd").click(function(){
+            //接收用户输入的列数据
+            //构建新行
+            var newRow="<tr class=\"alert alert-dismissable\">"+
+						"<td>"+
+								"<input type=\"text\" style=\"font-size: 18px;font-family: '微软雅黑';width: 100%;\" name=\"input\" class=\"form\" value=\"5.545\"/>"+
+						"</td>"+
+						"<td>"+
+								"<input type=\"text\" style=\"font-size: 18px;font-family: '微软雅黑';width: 100%;\" name=\"output\" class=\"form\" value=\"5.545\"/>"+
+						"</td>"+
+						"<td>"+
+								"<input type=\"text\" style=\"font-size: 18px;font-family: '微软雅黑';width: 100%;\" name=\"score\" class=\"form\" oninput=\"OnInput (event)\" onpropertychange=\"OnPropChanged (event)\" value=\"0\"/>"+
+						"</td>"+
+						"<td><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">"+
+								"<span aria-hidden=\"true\">&times;</span>"+
+								"</button></td>"+
+			"</tr>";
+            //为表格追加新行
+            $("#mybody").append(newRow);
+        }); 
+    });
+</script>
+		
 		<script src="js/bootstrap.min.js">
 		</script>
 	</body>

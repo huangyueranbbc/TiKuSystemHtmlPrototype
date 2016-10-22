@@ -30,6 +30,7 @@
 					</a>
 				</div>
 
+				<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-btn center-block text-center">
 					<li class="navbar-btn">
 						<a href="index.html">首页<span class="sr-only"></span></a>
@@ -78,7 +79,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
 				</ul>
-
+				</div>
 			</div>
 		</nav>
 		<!--   	导航条结束    -->
@@ -103,11 +104,11 @@
 		<div class="QuictReply">
 		<form action="topicHome.html">
 			<div style="padding-left: 3px;">
-				<table class="table table-striped">
+				<table class="table table-responsive">
 					<thead>
 						<tr>
 							<td>
-									<button type="button" class="btn btn-danger" onclick="xxoo">添加选项</button>
+									<button id="btnAdd" type="button" class="btn btn-danger">添加选项</button>
 							</td>
 						</tr>
 						<tr>
@@ -115,21 +116,21 @@
 						</tr>
 					</thead>
 
-					<body>
+					<tbody id="mybody">
 					<tr class="alert alert-dismissable">
 						<td>
-								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 100%;" name="title" class="form" value="int a=b;"/>
+								<input type="text" style="font-size: 18px;font-family: '微软雅黑';" name="title" class="form-control" value="int a=b;"/>
 						</td>
 						<td><button type="button" class="close" data-dismiss="alert" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button></td>
-					
+					</tr>
+					</tbody>
 					<tr height="30" class="Tint">
 						<td class="center" colspan="2" align="center">
 							<button type="submit" class="btn btn-success">提交</button>
 						</td>
 					</tr>
-					</body>
 				</table>
 			</div>
 		</form>
@@ -143,18 +144,32 @@
 		</div>
 		<!-- 中间内容结束 -->
 
-		<!--   	底部开始    -->
-		<footer class="navbar-inverse navbar-fixed-bottom" style="height: 90px;">
-			<!--采用container，使得页尾内容居中 -->
-			<div class="container" style="color: #FFFFFF;">
-				2017 &copy; 练习系统
-				<a href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
-			</div>
-		</footer>
-
-		<!-- 底部结束 -->
+<!--   	底部开始    -->
+	<footer class="navbar-inverse navbar-fixed-bottom navbar-collapse collapse">
+    <!--采用container，使得页尾内容居中 --> 
+        <div class="container" style="color: #FFFFFF;height: 70px;">
+        	2017 &copy; 练习系统 <a
+				href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
+        </div>
+     </footer>
+<!-- 底部结束 -->
 
 		<script src="js/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+    $(function(){
+        //按钮点击事件
+        $("#btnAdd").click(function(){
+            //接收用户输入的列数据
+
+            //构建新行
+            var newRow="<tr class='alert alert-dismissable'><td><input type='text' style='font-size: 18px;font-family: '微软雅黑';' name='title' class='form-control' value='int a=b;'/></td><td><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></td></tr>";
+            //为表格追加新行
+            $("#mybody").append(newRow);
+        }); 
+    });
+</script>
+		
 		<script src="js/bootstrap.min.js">
 		</script>
 	</body>

@@ -27,6 +27,7 @@
 					</a>
 				</div>
 				
+				<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-btn center-block text-center">
 					<li class="active navbar-btn">
 						<a href="index.html">首页<span class="sr-only"></span></a>
@@ -67,6 +68,7 @@
 					<ul class="nav navbar-nav navbar-right">
 					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
 					</ul>
+				</div>
 				
 			</div>
 		</nav>
@@ -76,7 +78,7 @@
 	<div class="container-fluid">
 	<div class="row">
         <!-- 侧边栏 -->
-		<div class="col-sm-3 col-md-2 sidebar" style="position: absolute;top: 70px;">
+		<div class="col-sm-3 col-md-2 sidebar collapse" style="position: absolute;top: 70px;">
 		
 			<ul class="nav nav-sidebar">
 				<li>
@@ -91,14 +93,14 @@
 				<li class="active">
 					<a href="visitor.html">访客记录<span class="badge">25</span></a>
 				</li>
-				<li>
-					<a href="#">Export</a>
+				<li class="alert-warning">
+					<a href="userManagerList.html">用户管理</a>
 				</li>
-				<li>
-					<a href="#">Export</a>
+				<li class="alert-warning">
+					<a href="#">主题管理</a>
 				</li>
-				<li>
-					<a href="#">Export</a>
+				<li class="alert-warning">
+					<a href="#">暗箱操作</a>
 				</li>
 			</ul>
 		</div>
@@ -175,14 +177,13 @@
 		
 
 <!--   	底部开始    -->
-	<footer class="navbar-inverse navbar-fixed-bottom" style="height: 90px;" >
+	<footer class="navbar-inverse navbar-fixed-bottom navbar-collapse collapse">
     <!--采用container，使得页尾内容居中 --> 
-        <div class="container" style="color: #FFFFFF;">
+        <div class="container" style="color: #FFFFFF;height: 70px;">
         	2017 &copy; 练习系统 <a
 				href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
         </div>
      </footer>
-     
 <!-- 底部结束 -->
 
 		<script src="js/jquery.min.js"></script>
