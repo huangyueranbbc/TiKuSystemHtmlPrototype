@@ -122,6 +122,8 @@
 					<td class="ForumPageTableTitle" style="font-size: 16px;"><b>本帖主题：这是一道送分题</b></td>
 					<td class="ForumPageTableTitle" align="right" style="padding-right:12px;">
 						<a class="detail" href="../BBS_Reply/saveUI.html"><img border="0" src="img/reply.gif" />回复</a>
+						<a href="moveUI.html"><img border="0" src="img/collect.gif" />收藏</a>
+						<a href="moveUI.html"><img border="0" src="img/uncollect.gif" />取消收藏</a>
 						<a href="moveUI.html"><img border="0" src="img/text.gif" />编辑</a>
 						<a href="#" onClick="return confirm('要把本主题设为精华吗？')"><img border="0" src="img/topicType_1.gif" />精华</a>
 						<a href="#" onClick="return confirm('要把本主题设为置顶吗？')"><img border="0" src="img/topicType_2.gif" />置顶</a>
@@ -144,7 +146,7 @@
 									onerror="this.onerror=null; this.src=''img/userpic.jpg;" />
 							</div>
 							<!--作者名称-->
-							<div class="AuthorName">管理员</div>
+							<div class="AuthorName"><a href="userHomePage.html" target="_blank">管理员</a></div>
 						</td>
 
 					</tr>
@@ -157,6 +159,7 @@
 						<td class="Footer" height="28" align="center" valign="bottom">
 							<ul class="list-unstyled"  style="margin: 0px; width: 98%;">
 								<li class="TopicFuncLi">
+									<a class="detail" href="../BBS_Topic/saveUI.html"><img border="0" src="img/laud.gif" />赞(50)</a>
 									<a class="detail" href="../BBS_Topic/saveUI.html"><img border="0" src="img/edit.gif" />编辑</a>
 									<a class="detail" href="#" onClick="return confirm('确定要删除本帖吗？')"><img border="0" src="img/delete.gif" />删除</a>
 								</li>
@@ -184,7 +187,7 @@
 									onerror="this.onerror=null; this.src='img/userpic.jpg';" />
 							</div>
 							<!--作者名称-->
-							<div class="AuthorName">管理员</div>
+							<div class="AuthorName"><a href="userHomePage.html" target="_blank">管理员</a></div>
 						</td>
 						<td align="center">
 							<ul class="TopicFunc list-unstyled">
@@ -329,6 +332,7 @@
 		<!-- 中间内容结束 -->
 
 <!--   	底部开始    -->
+<div style="height: 50px;"></div>
 	<footer class="navbar-inverse navbar-fixed-bottom navbar-collapse collapse">
     <!--采用container，使得页尾内容居中 --> 
         <div class="container" style="color: #FFFFFF;height: 70px;">

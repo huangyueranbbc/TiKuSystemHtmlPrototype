@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="题库">
+		<meta name="author" content="黄跃然 huangyueran">
+		<title>练习系统</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+		<link href="css/sticky-footer.css" rel="stylesheet" />
+		<link href="css/basic.css" rel="stylesheet" />
+		
+		<!-- 代码编辑器样式 -->
+		<link href="codemirror/codemirror.css" type="text/css" rel="stylesheet" />
+		<link href="codemirror/eclipse.css" type="text/css" rel="stylesheet" />
+		<link href="codemirror/neat.css" type="text/css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<!--   	导航条开始    -->
+		<nav class="nav navbar-inverse navbar-fixed-top">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- 	描述：logo -->
+					<a class="navbar-brand">
+						<img src="img/ic_launcher.jpg" style="width: 75px;" />
+					</a>
+				</div>
+
+				<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-btn center-block text-center">
+					<li class="navbar-btn">
+						<a href="index.html">首页<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="practiceHome.html">试题集<span class="sr-only"></span></a>
+					</li>
+					<li class="active navbar-btn">
+						<a href="testStatus.html">评测状态<span class="sr-only"></span></a>
+					</li>
+					<li class="navbar-btn">
+						<a href="#">帮助手册<span class="sr-only"></span></a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown navbar-btn">
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button">
+							<span class="glyphicon glyphicon-user"></span> admin
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="userCenter.html">个人信息</a>
+							</li>
+							<li>
+								<a href="#">我的消息</a>
+							</li>
+							<li>
+								<a href="#">修改密码</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="#">退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
+				</ul>
+				</div>
+			</div>
+		</nav>
+		<!--   	导航条结束    -->
+
+		<!-- 中间内容开始 -->
+		<div class="container">
+			<div class="row">
+
+				<!-- 内容 -->
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+
+					<!-- 路径 -->
+					<ol class="breadcrumb">
+						<li>
+							<a href="testStatus.html">评测状态 <span class="glyphicon glyphicon-chevron-right"></span></a>
+							<li class="active">000001 基础练习 Fibonacci数列<span class="glyphicon glyphicon-chevron-right"></li>
+						</li>
+					</ol>
+
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<tbody> 
+								<tr>
+									<td><b>提交序号</b></td>
+									<td>000001</td>
+								</tr>
+								<tr>
+									<td><b>用户</b></td>
+									<td>张三</td>
+								</tr>
+								<tr>
+									<td><b>提交时间</b></td>
+									<td>2016-10-22 13:36:20</td>
+								</tr>
+								<tr>
+									<td><b>评测结果</b></td>
+									<td>正确</td>
+								</tr>
+								<tr>
+									<td><b>得分</b></td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td><b>CPU使用</b></td>
+									<td>171ms</td>
+								</tr>
+								<tr>
+									<td><b>内存 使用</b></td>
+									<td>23.42MB</td>
+								</tr>
+								<tr>
+									<td><b>试题名称</b></td>
+									<td><a href="question.html">基础练习 Fibonacci数列</a></td>
+								</tr>
+								<tr>
+									<td><b>语言</b></td>
+									<td>JAVA</td>
+								</tr>
+								<tr>
+									<td><b>源代码</b></td>
+									<td><textarea id="ucode"></textarea></td>
+								</tr>
+								<tr>
+									<td><b>编译信息</b></td>
+									<td>无</td>
+								</tr>
+								<tr>
+									<!-------------------------------- 评测详情开始 -------------------------------->
+									<div id="detailcases" style="display:none;">
+										<table class="table table-hover">
+											<tr>
+												<th class="thodd">评测点序号</th>
+												<th class="theven">评测结果</th>
+												<th class="thodd">得分</th>
+												<th class="theven">CPU使用</th>
+												<th class="thodd">内存使用</th>
+												<th class="theven">下载评测数据</th>
+											</tr>
+									
+											<tr>
+												<td>1</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>124ms</td>
+												<td>23.34MB</td>
+												<td>
+													<a href='#'>输入</a>
+													<a href='#'>输出</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>2</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>109ms</td>
+												<td>23.28MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>3</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>140ms</td>
+												<td>23.41MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>4</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>109ms</td>
+												<td>23.29MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>5</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>140ms</td>
+												<td>23.26MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>6</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>124ms</td>
+												<td>23.31MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>7</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>156ms</td>
+												<td>23.31MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>8</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>171ms</td>
+												<td>23.38MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>9</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>156ms</td>
+												<td>23.36MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>10</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>156ms</td>
+												<td>23.42MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+											<tr>
+												<td>11</td>
+												<td><span class="Color_AC">正确</span></td>
+												<td>9.09</td>
+												<td>171ms</td>
+												<td>23.38MB</td>
+												<td>
+													<a href='/help.page#vip' style='color:red;'>VIP特权</a>
+												</td>
+											</tr>
+									
+										</table>
+									</div>
+									<!-------------------------------- 评测详情结束 -------------------------------->
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- 中间内容结束 -->
+
+
+<!--   	底部开始    -->
+<div style="height: 50px;"></div>
+	<footer class="navbar-inverse navbar-fixed-bottom navbar-collapse collapse">
+    <!--采用container，使得页尾内容居中 --> 
+        <div class="container" style="color: #FFFFFF;height: 70px;">
+        	2017 &copy; 练习系统 <a
+				href="http://user.qzone.qq.com/492736173/">技术支持:Hyr</a>
+        </div>
+     </footer>
+<!-- 底部结束 -->
+
+		<script src="js/jquery.min.js"></script>
+		
+<!------------------------- 代码编辑器 ------------------------->
+		<script type="text/javascript" src="codemirror/codemirror.min.js"></script>
+		<script src="codemirror/clike.js"></script>
+		<script src="codemirror/active-line.js"></script>
+		<script src="codemirror/matchbrackets.js"></script>
+		<script type="text/javascript">function setCode() {
+			var codeV = "/**\n * 153是一个非常特殊的数，它等于它的每位数字的立方和，即153=1*1*1+5*5*5+3*3*3。编程求所有满足这种条件的三位十进制数。\n */\npublic class Main {\n\tpublic static void main(String[] args) {\n\t\t// 123\n\t\tfor (int i = 100; i <= 999; i++) {\n\t\t\tint n1 = i / 100;\n\t\t\tint n2 = i / 10 % 10;\n\t\t\tint n3 = i % 10 % 10;\n\t\t\tif (n1 * n1 * n1 + n2 * n2 * n2 + n3 * n3 * n3 == i) {\n\t\t\t\tSystem.out.println(i);\n\t\t\t}\n\t\t}\n\t}\n}\n";
+			$("#ucode").val(codeV);
+			if("JAVA" == "JAVA") {
+				var cmJava = CodeMirror.fromTextArea($("#ucode").get(0), {
+					lineNumbers: true,
+					matchBrackets: true,
+					mode: "text/x-java",
+					theme: "eclipse",
+					indentWithTabs: true,
+					styleActiveLine: true,
+					indentUnit: 2,
+					tabSize: 2,
+					readOnly: true
+				});
+			} else if("JAVA" == "C") {
+				var cmC = CodeMirror.fromTextArea($("#ucode").get(0), {
+					lineNumbers: true,
+					matchBrackets: true,
+					mode: "text/x-csrc",
+					theme: "neat",
+					indentWithTabs: true,
+					styleActiveLine: true,
+					indentUnit: 2,
+					tabSize: 2,
+					readOnly: true
+				});
+			} else {
+				var cmCpp = CodeMirror.fromTextArea($("#ucode").get(0), {
+					lineNumbers: true,
+					matchBrackets: true,
+					mode: "text/x-c++src",
+					theme: "neat",
+					indentWithTabs: true,
+					styleActiveLine: true,
+					indentUnit: 2,
+					tabSize: 2,
+					readOnly: true
+				});
+			}
+		}
+		setCode();
+		</script>
+		
+		<script src="js/bootstrap.min.js">
+		</script>
+	</body>
+
+</html>

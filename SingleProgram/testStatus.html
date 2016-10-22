@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,23 +26,23 @@
 						<img src="img/ic_launcher.jpg" style="width: 75px;" />
 					</a>
 				</div>
-				
+
 				<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-btn center-block text-center">
 					<li class="navbar-btn">
 						<a href="index.html">首页<span class="sr-only"></span></a>
 					</li>
-					<li class="active navbar-btn">
+					<li class="navbar-btn">
 						<a href="practiceHome.html">试题集<span class="sr-only"></span></a>
 					</li>
-					<li class="navbar-btn">
+					<li class="active navbar-btn">
 						<a href="testStatus.html">评测状态<span class="sr-only"></span></a>
 					</li>
 					<li class="navbar-btn">
 						<a href="#">帮助手册<span class="sr-only"></span></a>
 					</li>
 				</ul>
-		
+
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown navbar-btn">
 						<a class="dropdown-toggle" data-toggle="dropdown" role="button">
@@ -72,13 +71,12 @@
 					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
 				</ul>
 				</div>
-
 			</div>
 		</nav>
 		<!--   	导航条结束    -->
 
 		<!-- 中间内容开始 -->
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 
 				<!-- 内容 -->
@@ -87,76 +85,129 @@
 					<!-- 路径 -->
 					<ol class="breadcrumb">
 						<li>
-							<a href="practiceHome.html">试题集 <span class="glyphicon glyphicon-chevron-right"></span></a>
-							<li class="active">入门训练 <span class="glyphicon glyphicon-chevron-right"></li>
+							<li class="active">评测状态<span class="glyphicon glyphicon-chevron-right"></li>
 						</li>
 					</ol>
 
 					<div class="table-responsive">
-						<table class="table table-hover">
+						
+						<!------- 搜索框 ------->
+          	<form action="#" class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入试题名包含的内容" />
+					</div>
+					<button type="submit" class="btn btn-warning">搜索</button>
+			</form>
+						
+						<table class="table table-hover"> 
 							<thead>
 								<tr>
-									<th>试题号</th>
+									<th>提交序号</th>
+									<th>用户名</th>
 									<th>试题名称</th>
-									<th>试题说明</th>
-									<th>试题类型</th>
-									<th>创建时间</th>
-									<th>状态</th>
-									<th>进入试题</th>
-									<th>提交记录</th>
+									<th>提交时间</th>
+									<th>代码长度</th>
+									<th>语言</th>
+									<th>评测结果</th>
+									<th>得分</th>
+									<th>CPU使用</th>
+									<th>内存使用</th>
+									<th>评测详情</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody  style="font-size: 15px;">
 								<tr>
-									<td>ALGO-1</td>
-									<td><a href="question.html">幸运数</a></td>
-									<td>幸运数</td>
-									<td>普通试题</td>
-									<td>2017-05-05</td>
-									<td>已打开</td>
-									<td><a href="question.html">进入</a></td>
-									<td><a href="#">提交记录</a></td>
+									<td>000001</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:18</td>
+									<td>274B</td>
+									<td>JAVA</td>
+									<td>等待评测</td>
+									<td>等待评测</td>
+									<td>等待评测</td>
+									<td>等待评测</td>
+									<td>等待评测</td>
 								</tr>
 								<tr>
-									<td>ALGO-2</td>
-									<td><a href="question.html">字符删除</a></td>
-									<td>删除指定字符串</td>
-									<td>普通试题</td>
-									<td>2017-05-05</td>
-									<td>未打开</td>
-									<td><a href="question.html">进入</a></td>
-									<td><a href="#">提交记录</a></td>
-								</tr>
-								<tr>
-									<td>ALGO-3</td>
-									<td><a href="question.html">高僧斗法</a></td>
-									<td>删除指定字符串</td>
-									<td>普通试题</td>
-									<td>2017-05-05</td>
+									<td>000001</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:18</td>
+									<td>274B</td>
+									<td>JAVA</td>
 									<td>正确</td>
-									<td><a href="question.html">进入</a></td>
-									<td><a href="#">提交记录</a></td>
+									<td>100</td>
+									<td>15ms</td>
+									<td>4.05MB</td>
+									<td><a href="testStatusInfo.html">评测详情</a></td>
 								</tr>
 								<tr>
-									<td>ALGO-4</td>
-									<td><a href="question.html">字符统计</a></td>
-									<td>删除指定字符串</td>
-									<td>普通试题</td>
-									<td>2017-05-05</td>
+									<td>000001</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:18</td>
+									<td>274B</td>
+									<td>JAVA</td>
+									<td>运行超时</td>
+									<td>50</td>
+									<td>运行超时</td>
+									<td>45.65MB</td>
+									<td><a href="testStatusInfo.html">评测详情</a></td>
+								</tr>
+								<tr>
+									<td>000002</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:23</td>
+									<td>1.727KB</td>
+									<td>JAVA</td>
+									<td>编译出错</td>
+									<td>85</td>
+									<td>编译出错</td>
+									<td>编译出错</td>
+									<td><a href="testStatusInfo.html">评测详情</a></td>
+								</tr>
+								<tr>
+									<td>000003</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:27</td>
+									<td>274B</td>
+									<td>JAVA</td>
 									<td>错误</td>
-									<td><a href="question.html">进入</a></td>
-									<td><a href="#">提交记录</a></td>
+									<td>0</td>
+									<td>15ms</td>
+									<td>4.60MB</td>
+									<td><a href="testStatusInfo.html">评测详情</a></td>
 								</tr>
 								<tr>
-									<td>ALGO-93</td>
-									<td><a href="question.html">阶乘</a></td>
-									<td>删除指定字符串</td>
-									<td>VIP试题</td>
-									<td>2017-05-05</td>
-									<td>未打开</td>
-									<td><a href="question.html">进入</a></td>
-									<td><a href="#">提交记录</a></td>
-								</tr>	
+									<td>000003</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:27</td>
+									<td>274B</td>
+									<td>JAVA</td>
+									<td>错误</td>
+									<td>25</td>
+									<td>15ms</td>
+									<td>4.60MB</td>
+									<td><a href="testStatusInfo.html">评测详情</a></td>
+								</tr>
+								<tr>
+									<td>000003</td>
+									<td>huangyueranbbc</td>
+									<td><a href="question.html" target="_blank">Fibonacci数列</a></td>
+									<td>2016-10-22 13:06:27</td>
+									<td>274B</td>
+									<td>JAVA</td>
+									<td>运行错误</td>
+									<td>0</td>
+									<td>343ms</td>
+									<td>4.60MB</td>
+									<td><a href="testStatusInfo.html">评测详情</a></td>
+								</tr>
+								
 							</tbody>
 						</table>
 						
@@ -225,23 +276,18 @@
 
 													</select>
 										</ul>
-										
-
-
 									
 										</center>
-									
-										<!-- 分页结束 -->
-										
+							<!-- 分页结束 -->
+						
 					</div>
 				</div>
-
-		
 
 			</div>
 
 		</div>
 		<!-- 中间内容结束 -->
+
 
 <!--   	底部开始    -->
 <div style="height: 50px;"></div>
