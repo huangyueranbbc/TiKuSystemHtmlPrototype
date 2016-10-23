@@ -84,7 +84,7 @@
 				<li>
 					<a href="userCenter.html">个人信息</a>
 				</li>
-				<li class="active">
+				<li>
 					<a href="updateUser.html">用户信息修改</a>
 				</li>
 				<li>
@@ -105,7 +105,7 @@
 				<li class="alert-warning">
 					<a href="userManagerList.html">用户管理</a>
 				</li>
-				<li class="alert-warning">
+				<li class="active alert-warning">
 					<a href="addUser.html">添加用户</a>
 				</li>
 				<li class="alert-warning">
@@ -117,59 +117,40 @@
 			</ul>
 		</div>
 
-		<!-- 内容 -->
+		<!-- 内容 --> 
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-			<h2 class="sub-header">用户信息修改</h2>
+			<h2 class="sub-header">添加用户</h2>
 			<div class="table-responsive">
-				<form action="userCenter.html" class="form-horizontal" role="form">
+				<form action="userManagerList.html" class="form-horizontal" role="form">
 
 					<table class="table table-striped">
 						<tbody>
 							<tr>
-								<td>用户名</td>
-								<td><input type="text" class="focus form-control" /></td> 
-
+								<td>请输入用户名</td>
+								<td><input type="text" class="focus form-control " /></td>
 							</tr>
 							<tr>
-								<td>姓名</td>
-								<td><input type="text" class="form-control " /></td>
-							</tr>
-							<tr>
-								<td>性别</td>
-								<td><input type="text" class="form-control " /></td>
-							</tr>
-							<tr>
-								<td>班级</td>
-								<td><input type="text" class="form-control " /></td>
-							</tr>
-							<tr>
-								<td>手机号码</td>
-								<td><input type="text" class="form-control " /></td>
-							</tr>
-							<tr>
-								<td>电子邮箱</td>
-								<td><input type="text" class="form-control " /></td>
-							</tr>
-							<tr>
-								<td>QQ</td>
-								<td><input type="text" class="form-control " /></td>
-							</tr>
-							<tr>
-								<td>积分</td>
-								<td><input type="text" class="form-control " /></td>
+								<td>重新输入用户名</td>
+								<td><input type="text" class="focus form-control " /></td>
 							</tr>
 							<tr>
 								<td>用户级别</td>
-								<td><input type="text" class="form-control " /></td>
+								<td>
+									<select name="viewType" class=" btn btn-success">
+									<option value="0">普通用户</option>
+									<option value="1">管理员</option>
+								</select>
+								</td>
 							</tr>
 							<tr>
-								<td>出生日期</td>
-								<td><input type="text" class="form-control " /></td>
+								<td>初始密码</td>
+								<td><input disabled="" type="text" class="focus form-control" value="666666" /></td>
 							</tr>
+							
 						</tbody>
 					</table>
-					<button class="btn btn-lg btn-primary btn-block" type="submit">保存</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">确认添加</button>
 				</form>
 			</div>
 		</div>
@@ -177,7 +158,9 @@
 	</div>
 
 </div>
-<!-- 中间内容结束 -->	
+<!-- 中间内容结束 -->
+		
+		
 
 <!--   	底部开始    -->
 <div style="height: 50px;"></div>

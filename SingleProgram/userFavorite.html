@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="题库">
     	<meta name="author" content="黄跃然 huangyueran">
 		<title>练习系统</title>
@@ -12,15 +12,14 @@
 		<link href="css/sticky-footer.css" rel="stylesheet"/>
 		<link href="css/dashboard.css" rel="stylesheet"/>
 		<link href="css/basic.css" rel="stylesheet"/>
-		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 		<!-- 禁用响应式布局 -->
 	</head>
 	<body>
 		
 	<!--   	导航条开始    -->
-    <nav class="nav navbar-inverse navbar-fixed-top navbar-collapse" role="navigation">
+    <nav class="nav navbar-inverse navbar-fixed-top">
 			<div class="container">
-
+				
 				<div class="navbar-header">
 					<!-- 	描述：logo -->
 					<a class="navbar-brand">
@@ -70,6 +69,7 @@
 					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
 					</ul>
 				</div>
+				
 			</div>
 		</nav>
 <!--   	导航条结束    -->
@@ -96,13 +96,13 @@
 				<li>
 					<a href="userTopic.html">我的主题</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="userFavorite.html">我的收藏</a>
 				</li>
 				<li>
 					<a href="visitor.html">访客记录&nbsp;<span class="badge">25</span></a>
 				</li>
-				<li class="active alert-warning">
+				<li class="alert-warning">
 					<a href="userManagerList.html">用户管理</a>
 				</li>
 				<li class="alert-warning">
@@ -120,93 +120,65 @@
 		<!-- 内容 -->
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-          <h2 class="sub-header">用户管理</h2>
+          <h2 class="sub-header">我的收藏</h2>
           <div class="table-responsive">
-          	
-          	<!------- 搜索框 ------->
-          	<form action="#" class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="请输入要搜索的内容" />
-					</div>
-					<button type="submit" class="btn btn-warning">搜索</button>
-			</form>
-          	
-            <table class="table table-bordered table-hover with-check " style="font-family:微软雅黑; font-size:16px;">
-			<thead> 
-				<tr>
-					<th  style="text-align: center;">学号</th>
-					<th style="text-align: center;">姓名</th>
-					<th style="text-align: center;">用户名</th>
-					<th style="text-align: center;">性别</th>
-					<th style="text-align: center;">班级</th>
-					<th style="text-align: center;">手机号码</th>
-					<th style="text-align: center;">QQ</th>
-					<th style="text-align: center;">邮箱</th>
-					<th style="text-align: center;">积分</th>
-					<th style="text-align: center;">用户级别</th>
-					<th style="text-align: center;">权限</th>
-				</tr>
-			</thead>
+            <table class="table table-hover table-responsive">
+            	<thead>
+            		<tr>
+            			<th>主题名称</th>
+            			<th>主题类型</th>
+            			<th>作者</th>
+            			<th>发帖日期</th>
+            			<th>更新日期</th>
+            			<th>进入主题</th>
+            		</tr>
+            	</thead>
               <tbody>
                 <tr>
-                  <td><a href="userHomePage.html" target="_blank">201830410111</a></td>          
-                  <td><a href="userHomePage.html" target="_blank">黄晓峰</a></td>       
-                  <td><a href="userHomePage.html" target="_blank">huangxiaofeng</td>
-                  <td>男</td>     
-                  <td>16计算机科学与技术</td>             
-                  <td>18271663566</td>
-                  <td>492736173</td>    
-                  <td>3081818283@qq.com</td>       
-                  <td>356</td>           
-                  <td>普通用户</td>
-                  <td>             	
-	                  	<a action="#" class="btn btn-default">禁言</a> 
-	                  	<a action="#" class="btn btn-default disabled">解除</a>
-	                  	<a action="#" onClick="return confirm('确定要重置密码吗？')" class="btn btn-default">重置密码</a>
-	                  	<a action="#" class="btn btn-info">设为管理员</a>  
-                  </td>
+                  <td><a href="topicShow.html" target="_blank">如何学习动态规划</a></td>
+                  <td>新增题目</td>
+                  <td>黄晓峰</td>
+                  <td>2016-10-23 11:21:08</td>
+                  <td>2016-10-23 11:29:27</td>
+                  <td><a href="topicShow.html" target="_blank">进入主题</a></td>
                 </tr>
                 <tr>
-                  <td><a href="userHomePage.html" target="_blank">201830410111</a></td>          
-                  <td><a href="userHomePage.html" target="_blank">黄晓峰</a></td>       
-                  <td><a href="userHomePage.html" target="_blank">huangxiaofeng</td>
-                  <td>男</td>     
-                  <td>16计算机科学与技术</td>             
-                  <td>18271663566</td>
-                  <td>492736173</td>    
-                  <td>3081818283@qq.com</td>       
-                  <td>356</td>           
-                  <td>管理员</td>
-                  <td>             	
-	                  	<a action="#" class="btn btn-default">禁言</a> 
-	                  	<a action="#" class="btn btn-default disabled">解除</a>
-	                  	<a action="#" onClick="return confirm('确定要重置密码吗？')" class="btn btn-default">重置密码</a>
-	                  	<a action="#" class="btn btn-danger">取消管理员</a>  
-                  </td>
+                  <td><a href="topicShow.html" target="_blank">如何学习动态规划</a></td>
+                  <td>新增题目</td>
+                  <td>黄晓峰</td>
+                  <td>2016-10-23 11:21:08</td>
+                  <td>2016-10-23 11:29:27</td>
+                  <td><a href="topicShow.html" target="_blank">进入主题</a></td>
                 </tr>
-               	<tr>
-                  <td><a href="userHomePage.html" target="_blank">201830410111</a></td>          
-                  <td><a href="userHomePage.html" target="_blank">黄晓峰</a></td>       
-                  <td><a href="userHomePage.html" target="_blank">huangxiaofeng</td>
-                  <td>男</td>     
-                  <td>16计算机科学与技术</td>             
-                  <td>18271663566</td>
-                  <td>492736173</td>    
-                  <td>3081818283@qq.com</td>       
-                  <td>356</td>           
-                  <td>普通用户</td>
-                  <td>
-	                  	<a action="#" class="btn btn-default disabled">禁言</a> 
-	                  	<a action="#" class="btn btn-default">解除</a>
-	                  	 <a action="#" onClick="return confirm('确定要重置密码吗？')" class="btn btn-default">重置密码</a>
-	                  	<a action="#" class="btn btn-info">设为管理员</a>  
-                  </td>
+                <tr>
+                  <td><a href="topicShow.html" target="_blank">如何学习动态规划</a></td>
+                  <td>新增题目</td>
+                  <td>黄晓峰</td>
+                  <td>2016-10-23 11:21:08</td>
+                  <td>2016-10-23 11:29:27</td>
+                  <td><a href="topicShow.html" target="_blank">进入主题</a></td>
+                </tr>
+                <tr>
+                  <td><a href="topicShow.html" target="_blank">如何学习动态规划</a></td>
+                  <td>新增题目</td>
+                  <td>黄晓峰</td>
+                  <td>2016-10-23 11:21:08</td>
+                  <td>2016-10-23 11:29:27</td>
+                  <td><a href="topicShow.html" target="_blank">进入主题</a></td>
+                </tr>
+                <tr>
+                  <td><a href="topicShow.html" target="_blank">如何学习动态规划</a></td>
+                  <td>新增题目</td>
+                  <td>黄晓峰</td>
+                  <td>2016-10-23 11:21:08</td>
+                  <td>2016-10-23 11:29:27</td>
+                  <td><a href="topicShow.html" target="_blank">进入主题</a></td>
                 </tr>
                 
               </tbody>
             </table>
             
-            				<!-- 分页开始 -->
+            <!-- 分页开始 -->
 										<p></p>
 										<div class="container-fluid">
 											页次：1/13页 &nbsp; 每页显示：30条 &nbsp; 总记录数：385条 &nbsp;
@@ -281,7 +253,7 @@
 	</div>
 
 </div>
-<!-- 中间内容结束 -->		
+<!-- 中间内容结束 -->
 		
 <!--   	底部开始    -->
 <div style="height: 50px;"></div>
