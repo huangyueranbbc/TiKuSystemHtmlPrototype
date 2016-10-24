@@ -26,20 +26,25 @@
 			sum = parseFloat(sum) + parseFloat(array[i].value);
 		}
 		$('#score_hint').html("当前总分值:"+sum);
-		if(sum==parseFloat(100) ){ 
+		if(sum!=NaN ||  sum!=null){
+			if(sum==parseFloat(100) ){
 			//btn_submit
 			$('#btn_submit').removeAttr("disabled");
 			$('#score_waring').html("");
 			$('#score_hint').attr("class","alert alert-success");
-		}else if(sum>100){
+		}else if(sum>parseFloat(100)){
 			$('#btn_submit').attr("disabled",true);
 			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数超出范围！");
 			$('#score_hint').attr("class","alert alert-danger");
-		}else if(sum<100){
+		}else if(sum<parseFloat(100)){
 			$('#btn_submit').attr("disabled",true); 	
 			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数未达到100分！");
 			$('#score_hint').attr("class","alert alert-warning");
+		}else{
+			$('#btn_submit').attr("disabled",true);
 		}
+		
+		} 
 	}
 	// Internet Explorer
 	function OnPropChanged(event) {
@@ -52,20 +57,26 @@
 			sum = parseFloat(sum) + parseFloat(array[i].value);
 		}
 		$('#score_hint').html("当前总分值:"+sum);
-		if(sum==parseFloat(100) ){ 
+		if(sum!=NaN ||  sum!=null){
+			if(sum==parseFloat(100) ){
 			//btn_submit
 			$('#btn_submit').removeAttr("disabled");
 			$('#score_waring').html("");
 			$('#score_hint').attr("class","alert alert-success");
-		}else if(sum>100){
+		}else if(sum>parseFloat(100)){
 			$('#btn_submit').attr("disabled",true);
 			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数超出范围！");
 			$('#score_hint').attr("class","alert alert-danger");
-		}else if(sum<100){
+		}else if(sum<parseFloat(100)){
 			$('#btn_submit').attr("disabled",true); 	
 			$('#score_hint').html("当前总分值:"+sum+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分数未达到100分！");
 			$('#score_hint').attr("class","alert alert-warning");
+		}else{
+			$('#btn_submit').attr("disabled",true);
 		}
+		
+		}
+		
 	}
 </script>
     
