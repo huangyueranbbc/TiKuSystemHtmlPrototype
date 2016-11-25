@@ -1,60 +1,35 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="题库">
-		<meta name="author" content="黄跃然 huangyueran">
+    	<meta name="author" content="黄跃然 huangyueran">
 		<title>练习系统</title>
-		<script language="javascript" src="js/jquery.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
-		<link href="css/sticky-footer.css" rel="stylesheet" />
-		<link href="css/basic.css" rel="stylesheet" />
-		
-	
-	<!-- 1，引入js文件 -->
-	<script type="text/javascript" src="fckeditor/fckeditor.js"></script>
-    <script type="text/javascript"> 
-		$(function(){
-			var fck1 = new FCKeditor("topicContent");
-			fck1.Width = "100%";
-			fck1.Height="300px";
-			fck1.ToolbarSet = "bbs";
-			fck1.BasePath = "fckeditor/";
-			fck1.ReplaceTextarea();
-		});		
-		$(function(){
-			var fck3 = new FCKeditor("content");
-			fck3.Width = "100%";
-			fck3.Height="300px";
-			fck3.ToolbarSet = "bbs";
-			fck3.BasePath = "fckeditor/";
-			fck3.ReplaceTextarea();
-		});
-    </script> 
-    
+		<link href="css/sticky-footer.css" rel="stylesheet"/>
+		<link href="css/dashboard.css" rel="stylesheet"/>
+		<link href="css/basic.css" rel="stylesheet"/>
 		<!-- 禁用响应式布局 -->
 	</head>
-
 	<body>
 		
-		<!--   	导航条开始    -->
-		<nav class="nav navbar-inverse navbar-fixed-top">
+	<!--   	导航条开始    -->
+    <nav class="nav navbar-inverse navbar-fixed-top">
 			<div class="container">
-
+				
 				<div class="navbar-header">
 					<!-- 	描述：logo -->
 					<a class="navbar-brand">
 						<img src="img/ic_launcher.jpg" style="width: 75px;" />
 					</a>
 				</div>
-
+				
 				<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-btn center-block text-center">
-					<li class="navbar-btn">
+					<li class="active navbar-btn">
 						<a href="index.html">首页<span class="sr-only"></span></a>
 					</li>
 					<li class="navbar-btn">
@@ -66,15 +41,15 @@
 					<li class="navbar-btn">
 						<a href="practiceHome.html">进入系统<span class="sr-only"></span></a>
 					</li>
-					<li class="active navbar-btn">
+					<li class="navbar-btn">
 						<a href="topicHome.html">交流中心<span class="sr-only"></span></a>
 					</li>
 					<li class="navbar-btn">
 						<a href="#">联系方式<span class="sr-only"></span></a>
 					</li>
 				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
+					
+					<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown navbar-btn">
 						<a class="dropdown-toggle" data-toggle="dropdown" role="button">
 							<span class="glyphicon glyphicon-user"></span>
@@ -89,63 +64,78 @@
 						</ul>
 					</li>
 					</ul>
-
-				<ul class="nav navbar-nav navbar-right">
+					
+					<ul class="nav navbar-nav navbar-right">
 					<a href="login.html" class="btn btn-default navbar-btn">登录</a>
-				</ul>
-
-			</div>
+					</ul>
+				</div>
+				
 			</div>
 		</nav>
-		<!--   	导航条结束    -->
+<!--   	导航条结束    -->
 
-		<!-- 中间内容开始 -->
-		<div class="container-fluid">
-			<div class="row">
+<!-- 中间内容开始 -->
+<div class="container-fluid">
+	<div class="row">
+		<!-- 侧边栏 -->
+		<div class="col-sm-3 col-md-2 sidebar collapse" style="position: absolute;top: 70px;">
 
-				<!-- 内容 -->
-				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+			<ul class="nav nav-sidebar">
+				<li>
+					<a href="userCenter.html">个人信息</a>
+				</li>
+				<li>
+					<a href="updateUser.html">用户信息修改</a>
+				</li>
+				<li>
+					<a href="updatePassword.html">修改密码</a>
+				</li>
+				<li>
+					<a href="userAlerts.html">我的提醒&nbsp;<span class="badge" style="background-color: #FF5400;">12</span></a>
+				</li>
+				<li>
+					<a href="userTopic.html">我的主题</a>
+				</li>
+				<li>
+					<a href="userFavorite.html">我的收藏</a>
+				</li>
+				<li>
+					<a href="visitor.html">访客记录&nbsp;<span class="badge">25</span></a>
+				</li>
+				<li class="alert-warning">
+					<a href="userManagerList.html">用户管理</a>
+				</li>
+				<li class="active alert-warning">
+					<a href="addUser.html">添加用户</a>
+				</li>
+				<li class="alert-warning">
+					<a href="topicManagerList.html">主题管理</a>
+				</li>
+				<li class="alert-warning">
+					<a href="#">暗箱操作</a>
+				</li>
+				<li class="alert-warning">
+					<a href="createQuestion.html">创建试题集</a>
+				</li>
+				<li class="alert-warning">
+					<a href="createQuestionSet.html">创建试题</a>
+				</li>
+			</ul>
+		</div>
 
-					<!-- 路径 -->
-					<ol class="breadcrumb">
-						<li>
-							<a href="topicHome.html">交流中心 <span class="glyphicon glyphicon-chevron-right"></span></a>
-							<li class="active">发表新主题<span class="glyphicon glyphicon-chevron-right"></li>
-						</li>
-					</ol>					
-		
-		<!--发表新主题开始-->
-		<div class="QuictReply">
-		<form action="createAnswer_b.html">
-			<div style="padding-left: 3px;">
-				<table class="table table-striped">
-					<tr>
-						<td width="100px"><b>主题类型</b></td> 
-						<td>
-								<select name="viewType" class=" btn btn-default"  onchange="window.location=this.value;">
-									<option value="createTopic.html">新增题目</option>
-									<option value="createNormalTopic.html">知识讨论</option> 
-								</select>
-								<input type="hidden" name="主题类型" value="1" />
-						</td>
-					</tr>
+		<!-- 内容 --> 
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+			<h2 class="sub-header">添加试题</h2>
+			<div class="table-responsive">
+				<form action="createAnswer_type_b.html" class="form-horizontal" role="form"> 
+
+					<table class="table table-striped">
 					<tr height="50" class="Tint">
-						<td width="50px" class="Deep"><b>标题</b></td>
+						<td width="50px" class="Deep"><b>试题名称</b></td>
 						<td class="no_color_bg">
 							<input type="text" style="font-size: 20px;font-family: '微软雅黑';" name="title" class="InputStyle text-center form-control" value="关于算法题目" style="width:100%" />
 						</td>
-					</tr>
-					<tr class="Tint" height="200">
-						<td valign="top" class="Deep"><b>内容</b></td>
-						<td valign="top" class="no_color_bg">
-							<textarea name="topicContent" style="width: 100%; height: 100px;"></textarea>  
-						</td>
-					</tr>
-					<tr>
-						<td width="100px"><b>试题名称</b></td> 
-						<td>
-								<input type="text" style="font-size: 20px;font-family: '微软雅黑';" name="title" class="InputStyle text-center form-control" value="猴子摘桃" style="width:100%" />
-						</td> 
 					</tr>
 					<tr>
 						<td width="100px"><b>题目类型</b></td> 
@@ -181,13 +171,7 @@
 					<tr>
 						<td width="100px"><b>问题描述</b></td> 
 						<td>
-								<textarea name="description" class="form-control" rows="2"></textarea>  
-						</td>
-					</tr>
-					<tr>
-						<td width="100px"><b>问题内容</b></td> 
-						<td>
-								<textarea name="content" class="form-control" rows="6"></textarea>
+								<textarea class="form-control" rows="6"></textarea>
 						</td>
 					</tr>
 					<tr>
@@ -238,25 +222,21 @@
 								<input type="text" style="font-size: 18px;font-family: '微软雅黑';width: 10%;" name="title" class="form" value="5.545"/>MB
 						</td>
 					</tr>
-					<tr height="30" class="Tint">
-						<td class="center" colspan="2" align="center">
-							<button type="submit" class="btn btn-success">确认</button>
-						</td>
-					</tr>
 				</table>
-			</div>
-		</form>
-		<div style="height: 130px;"></div>
-		</div>
-		<!--发表新主题结束-->
-	
-					
+					<button class="btn btn-lg btn-primary btn-block" type="submit">确认</button>
+				</form>
 			</div>
 		</div>
-		</div>
-		<!-- 中间内容结束 -->
+
+	</div>
+
+</div>
+<!-- 中间内容结束 -->
+		
+		
 
 <!--   	底部开始    -->
+<div style="height: 50px;"></div>
 	<footer class="navbar-inverse navbar-fixed-bottom navbar-collapse collapse">
     <!--采用container，使得页尾内容居中 --> 
         <div class="container" style="color: #FFFFFF;height: 70px;">
@@ -270,5 +250,4 @@
 		<script src="js/bootstrap.min.js">
 		</script>
 	</body>
-
 </html>
